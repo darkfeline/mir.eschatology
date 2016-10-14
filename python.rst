@@ -17,10 +17,5 @@ Python code SHOULD NOT import members from packages or modules.
 Public and private members
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Docstrings
-^^^^^^^^^^
-
-Public classes and functions MUST have docstrings.
-
 Testing
 -------

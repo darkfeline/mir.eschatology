@@ -7,6 +7,8 @@ Project layout
 Documentation
 -------------
 
+Projects MUST provide documentation.
+
 Releases and versioning
 -----------------------
 
