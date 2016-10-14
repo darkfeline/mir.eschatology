@@ -5,6 +5,7 @@ mir.eschatology provides documentation for the mir project.
 
 .. toctree::
    :maxdepth: 2
+
    intro
    python
    project
