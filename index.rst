@@ -52,10 +52,13 @@ Projects should use `semantic versioning`_.
 Projects should upload a source distribution and a wheel to PyPI for
 each release.  The source distribution should include:
 
+- ``setup.py``
 - source code
 - documentation
+- tests
 - license file
-- NEWS.rst (release notes)
+- ``README.rst``
+- ``NEWS.rst`` (release notes)
 
 Version control
 ---------------
