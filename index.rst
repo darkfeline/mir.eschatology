@@ -40,14 +40,31 @@ should be used, per `PEP 287`_.
 Packaging
 ---------
 
+Python packages and modules should be packaged and distributed
+according to the `Python Packaging User Guide`_.
+
+.. _Python Packaging User Guide: https://packaging.python.org/
+
+Projects should use `semantic versioning`_.
+
+.. _semantic versioning: https://semver.org/
+
+Projects should upload a source distribution and a wheel to PyPI for
+each release.  The source distribution should include:
+
+- source code
+- documentation
+- license file
+- NEWS.rst (release notes)
+
+Version control
+---------------
+
 Documentation
 -------------
 
 Testing
 -------
-
-Release versioning
-------------------
 
 Licensing
 ---------
