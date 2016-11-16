@@ -72,6 +72,11 @@ each release.  The source distribution should include:
 - ``README.rst``
 - ``NEWS.rst`` (release notes)
 
+Python packages and modules under Project Mir should use the namespace
+package ``mir``.  The maximum level of packages is 2
+(``mir.package.module``), or 3 for namespace packages under ``mir``
+(``mir.codecs.package.module``).
+
 Version control
 ---------------
 
@@ -105,8 +110,35 @@ Sphinx.
 Testing
 -------
 
+Projects should maintain 100% line coverage and branch coverage and
+the tests must be passing at every commit.
+
+The test coverage requirement is a bare minimum, not an end goal.
+Full test coverage ensures that every line of code is able to run and
+work as expected in at least one case.  Any line of code that cannot
+even be run or work correctly in one case is worse than mediocre and
+thus unacceptable.
+
+Fixed bugs must have a regression test.
+
+Projects should have CI.  mir.protology includes CI configuration.
+
 Licensing
 ---------
 
+Projects should be licensed under a FSF-approved free software
+license.  mir.protology includes the Apache and GPL licenses.
+
 Contributions
 -------------
+
+While Project Mir is a personal project, contributions are welcome.
+For the time being, please assign the copyright for any contributions
+to me.
+
+Reasons for the copyright assignment:
+
+- get rid of general legal ambiguity
+- more freedom for relicensing, for example moving an Apache project
+  to GPL or vice verse.
+- clear path to public domain after copyright expires
