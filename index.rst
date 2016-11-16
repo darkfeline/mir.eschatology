@@ -45,9 +45,21 @@ according to the `Python Packaging User Guide`_.
 
 .. _Python Packaging User Guide: https://packaging.python.org/
 
-Projects should use `semantic versioning`_.
+Projects should use `semantic versioning`_.  Precedence of the public
+API specification is as follows:
 
 .. _semantic versioning: https://semver.org/
+
+- Tests for a given behavior.
+- Documentation included in the distribution, but separate from the
+  source code.
+- Docstrings and metadata variables (``__all__``) in the source code.
+- The source code itself, for functions and classes declared public by
+  one of the previous levels of specification.
+
+When in doubt, the specification should be considered ambiguous and
+should be clarified via tests or documentation before being relied
+upon.
 
 Projects should upload a source distribution and a wheel to PyPI for
 each release.  The source distribution should include:
@@ -63,8 +75,32 @@ each release.  The source distribution should include:
 Version control
 ---------------
 
+Projects should use Git.  The ``master`` branch should represent the
+current head of development.  Releases should be tagged with an
+annotated tag, e.g. ``v1.0.0``.  Separate branches should be made for
+major and minor versions that are not at the head of ``master`` and
+require changes, e.g. ``v1.0`` for bug fixes, ``v1`` for new features
+(major versions not on ``master`` should probably not receive new
+features due to the increased maintenance burden).
+
+Separate feature branches may be used.  Feature branches should be
+merged via rebase and fast forward when convenient.
+
+Convoluted branching models (e.g., with separate development and
+stable branches) should not be used.  ``master`` should represent both
+the development and stable branch.
+
 Documentation
 -------------
+
+Projects should include documentation.  Libraries should document
+their entire public API.  Applications should document all features
+and options, although a thorough technical specification may not be
+necessary.
+
+If the project is small, the documentation may be kept in the README
+file.  Otherwise, more formal documentation should be created using
+Sphinx.
 
 Testing
 -------
